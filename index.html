@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flash USDT Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>Flash USDT Generator</h1>
+    <p>Educational Demo Platform</p>
+  </header>
+
+  <section class="stats">
+    <div class="card">
+      Virtual Liquidity<br>
+      <span>$1,000,000</span>
+    </div>
+    <div class="card"><p>Generated Today: <span id="generatedToday">0</span></p></div>
+
+    <div class="card">Success Rate<br><span>99.8%</span></div>
+    <div class="card">Networks<br><span>1</span></div>
+    <div class="card">Security<br><span>Military Grade</span></div>
+  </section>
+
+  <nav class="nav">
+    <button onclick="showHome()">⚡ Generate</button>
+    <button onclick="showHistory()">⏳ History</button>
+    <button onclick="showSettings()">⚙️ Settings</button>
+  </nav>
+
+  <main class="main">
+    <div class="left-panel">
+      <h2>Flash USDT Generator</h2>
+
+      <!-- ✅ Wallet Connect -->
+      <button onclick="connectWallet()">🔗 Connect Wallet</button>
+
+      <label>Amount (USDT)</label>
+      <input id="amount" type="number" placeholder="Enter amount (10,000 - 1,000,000)" />
+
+      <label>Blockchain Network</label>
+      <select id="network">
+        <option value="Sepolia">ERC20 (Ethereum)</option>
+        <option value="BEP20">BEP20 (BSC)</option>
+        <option value="TRC20">TRC20 (Tron)</option>
+      </select>
+
+      <label>Wallet Address</label>
+      <input id="wallet" type="text" placeholder="Your wallet address" readonly />
+
+      <label>Burn Period (days)</label>
+      <input id="burnDays" type="number" value="365" min="365" max="1000" />
+
+      <button onclick="generateUSDT()">Generate Flash USDT</button>
+    </div>
+
+    <div class="right-panel">
+      <h2><span class="live-status">
+        <span class="arrow">▶</span> Live
+      </span> Live Stats</h2>
+
+      <section class="stats">
+        <div class="card"><p>Total USDT Generated: <span id="totalUSDT">0</span></p></div>
+        <div class="card"><p>Total Transactions: <span id="txCount">0</span></p></div>
+      </section>
+
+      <h3>Supported Wallets</h3>
+      <ul>
+        <li>TRON (TRC20)<span class="status-badge">Online</span></li>
+        <li>Ethereum (ERC20)<span class="status-badge1">Online</span></li>
+        <li>Binance Smart Chain (BEP20)<span class="status-badge2">Online</span></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <a href="admin.html" class="admin-dashboard-btn">🔒 Admin Dashboard</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
